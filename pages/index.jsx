@@ -31,11 +31,13 @@ export default function Home({ data }) {
             isOptionEqualToValue={(option, value) => option.name === value.name}
             renderOption={(props, oldest) => (
               <Box component="li" {...props}>
-                <div>
                   <Link href={`/modal/${oldest.id}`}>
+                <div>
+
                     <h1 className={styles.Autocomplete_h1}>{oldest.name}</h1>
+                    </div>
                   </Link>
-                </div>
+                
               </Box>
             )}
             renderInput={(params) => <TextField {...params} label="поиск" />}
