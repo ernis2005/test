@@ -1,5 +1,6 @@
 {
   "extends": [
-    "plugin:react/recommended", "airbnb", "next", "prettier",
-    "next/babel", "next/core-web-vitals"]
+    "next/babel",
+    "next/core-web-vitals",
+   "@babel/plugin-proposal-do-expressions"]
 }
