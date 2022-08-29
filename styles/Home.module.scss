@@ -1,0 +1,50 @@
+.container {
+  display: block;
+  justify-content: center;
+}
+.Autocomplete_h1 {
+  font-size: 16px;
+}
+.Stack {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  top: 0;
+  margin-top: 10px;
+  position: fixed;
+  margin-left: 250px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+.map_card {
+    width: 70%;
+  padding-top: 100px;
+  margin: 0 auto;
+  gap: 40px;
+  display: grid;  
+  grid-template-columns: 250px 250px 250px;
+}
+
+@media screen and (max-width: 944px) {
+    .map_card {
+        width: 90%;
+        padding-top: 100px;
+        margin: 0 auto;
+        gap: 40px;
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+      }
+}
+@media screen and (max-width: 550px) {
+    .Stack{
+        margin-left: 100px;
+    }
+    .map_card {
+        padding-top: 100px;
+        margin: 0 auto;
+        gap: 40px;
+        display: grid;
+        margin-left: 50px;
+        grid-template-columns: 250px;
+      }
+}
