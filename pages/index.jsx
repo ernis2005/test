@@ -1,15 +1,14 @@
 import styles from "../styles/Home.module.scss";
-import React, { useState } from "react";
+import React from "react";
 
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
 
 import axios from "axios";
-import Card from "../boc_card";
 import { Box } from "@mui/material";
 import Link from "next/link";
-import Cards from "../boc_card";
+import Cards from "../booc_card";
 export default function Home({ data }) {
   const oldest = data.sort((a, b) => {
     if (a.name > b.name) {
@@ -21,7 +20,6 @@ export default function Home({ data }) {
 
   return (
     <div className={styles.container}>
-      
       <div>
         <Stack className={styles.Stack}>
           <Autocomplete
@@ -31,13 +29,11 @@ export default function Home({ data }) {
             isOptionEqualToValue={(option, value) => option.name === value.name}
             renderOption={(props, oldest) => (
               <Box component="li" {...props}>
-                  <Link href={`/modal/${oldest.id}`}>
-                <div>
-
+                <Link href={`/modal/${oldest.id}`}>
+                  <div>
                     <h1 className={styles.Autocomplete_h1}>{oldest.name}</h1>
-                    </div>
-                  </Link>
-                
+                  </div>
+                </Link>
               </Box>
             )}
             renderInput={(params) => <TextField {...params} label="поиск" />}

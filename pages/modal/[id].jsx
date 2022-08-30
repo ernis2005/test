@@ -2,11 +2,9 @@ import React from "react";
 import axios from "axios";
 import { SiGmail } from "react-icons/si";
 import { GoLocation } from "react-icons/go";
-import { BsTelephoneFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -17,11 +15,11 @@ import s from "./scss.module.scss";
 import Button from "@mui/material/Button";
 
 import Link from "next/link";
-import Cards from "../../boc_card";
+import Cards from "../../booc_card";
 function Modal({ data, data2 }) {
   console.log(data);
   return (
-    <>
+    <div className={s.div}>
       <Link href={`/`}>
         <Button size="small">Назать</Button>
       </Link>
@@ -82,7 +80,7 @@ function Modal({ data, data2 }) {
             );
           })}
       </Swiper>
-    </>
+    </div>
   );
 }
 
